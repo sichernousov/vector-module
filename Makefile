@@ -14,7 +14,7 @@ check_out_dir :
 	mkdir -p ${OUTPUT_DIR}
 
 program: vector3.o main.o
-	$(CC) $(OUTPUT_DIR)/vector3.o $(OUTPUT_DIR)/main.o -o program
+	$(CC) $(OUTPUT_DIR)/vector3.o $(OUTPUT_DIR)/main.o -o program -lm
 
 vector3.o: 
 	$(CC) $(CFLAGS) $(SRC_DIR)/vector3.c -o $(OUTPUT_DIR)/vector3.o
