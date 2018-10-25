@@ -17,6 +17,9 @@ int main ()
 
 	c = vector3_dif (&a, &b);
 	printf("DIF = (%d, %d, %d)\n", c.x, c.y, c.z);
+	
+	c = vector3_mult_num (&a, 5);
+	printf("MULT (v1, 5) = (%d, %d, %d)\n", c.x, c.y, c.z);
 
 	return 0;
 }
