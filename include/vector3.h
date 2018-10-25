@@ -8,5 +8,6 @@ typedef struct vector3_t
 
 vector3_t vector3_sum (vector3_t *v1, vector3_t *v2);
 vector3_t vector3_dif (vector3_t *v1, vector3_t *v2);
+vector3_t vector3_mult_num (vector3_t *v1, int num);
 
 #endif
