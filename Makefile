@@ -8,7 +8,10 @@ OUTPUT_DIR = obj
 CC = gcc
 CFLAGS = -c
 
-all: program
+all: check_out_dir program
+
+check_out_dir :
+	mkdir -p ${OUTPUT_DIR}
 
 program: vector3.o main.o
 	$(CC) $(OUTPUT_DIR)/vector3.o $(OUTPUT_DIR)/main.o -o program
@@ -20,6 +23,6 @@ main.o:
 	$(CC) $(CFLAGS) main.c -o $(OUTPUT_DIR)/main.o
 
 clean:
-	rm -rf $(OUTPUT_DIR)/* program
+	rm -rf $(OUTPUT_DIR) program
 
 .PHONY: clean
